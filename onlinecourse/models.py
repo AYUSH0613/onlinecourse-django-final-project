@@ -21,3 +21,9 @@ class Choice(models.Model):
 class Submission(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     choices = models.ManyToManyField(Choice)
+
+from django.contrib.auth.models import User
+
+class Submission(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    choices = models.ManyToManyField(Choice)
