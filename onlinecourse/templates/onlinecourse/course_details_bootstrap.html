@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+<h2>{{ course.name }}</h2>
+
+<h4>Lessons</h4>
+
+<ul class="list-group">
+
+{% for lesson in course.lesson_set.all %}
+
+<li class="list-group-item">
+{{ lesson.title }}
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+{% endblock %}
